@@ -1,0 +1,10 @@
+# Local review artefacts — regenerable screenshots and the type specimen
+_review/
+
+# Tooling
+node_modules/
+.netlify/
+
+# OS
+.DS_Store
+Thumbs.db

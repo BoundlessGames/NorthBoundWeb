@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Pricing — NorthBound Web</title>
+<meta name="description" content="One price, stated up front. Websites from $1,500, most at $1,800 for up to five pages. Custom design, launched in about seven business days. Care plans from $100/month." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #F6F4EE; color: #1C1B18; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #1B3A5C; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: #1C1B18; }
+  img { max-width: 100%; display: block; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  @media (max-width: 760px) {
+    [data-component="feature-list"] div[style*="border-left"], [data-component="process"] div[style*="border-left"] { padding-left: 0 !important; border-left: 0 !important; }
+  }
+  @media print {
+    body { background: #fff; }
+    a[href^="http"] { text-decoration: none; }
+    section { break-inside: avoid; }
+    [data-noprint] { display: none; }
+  }
+</style>
+</helmet>
+
+<header data-component="nav" style="background: #F6F4EE; border-bottom: 1px solid #D9D5CB;">
+  <div style="max-width: 1040px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <a href="Home.dc.html" aria-label="NorthBound, home" style="display: block; line-height: 0;"><img src="northbound-wordmark.svg" alt="NorthBound" width="159" height="42" style="height: 42px; width: auto;" /></a>
+    <nav style="display: flex; align-items: center; gap: 24px;">
+      <span aria-current="page" style="font-size: 17px; font-weight: 500; color: #1C1B18;">Pricing</span>
+      <a href="{{ bookingUrl }}" style="font-size: 17px; font-weight: 600; text-decoration: none; color: #F6F4EE; background: #1B3A5C; padding: 12px 20px; border-radius: 4px;">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<section data-component="header" style="background: #F6F4EE;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 72px 24px 80px;">
+    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: clamp(38px, 7.2vw, 60px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 24px; max-width: 720px;">One price,<br />stated up front.</h1>
+    <p style="font-size: 17px; line-height: 1.55; margin: 0; max-width: 54ch;">Custom design, built to work properly on phones, launched in about seven business days. No hourly billing and nothing added after we start.</p>
+  </div>
+</section>
+
+<section data-component="websites" style="background: #F6F4EE; border-top: 1px solid #D9D5CB;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 72px 24px;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 32px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 40px; border-left: 3px solid #1C1B18; padding-left: 16px;">Websites.</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; align-items: start;">
+
+      <article data-component="tier" style="padding: 28px 24px; border: 1px solid #D9D5CB;">
+        <h3 style="font-size: 17px; font-weight: 600; line-height: 1.3; margin: 0 0 16px;">Essential</h3>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 8px;">$1,500</p>
+        <p style="font-size: 17px; line-height: 1.5; margin: 0 0 20px;">Three pages</p>
+        <ul style="display: grid; gap: 8px; font-size: 17px; line-height: 1.5; color: #6B6862;">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </article>
+
+      <article data-component="tier" style="padding: 28px 24px; border: 1px solid #1C1B18; background: #FFFFFF;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 16px;">
+          <h3 style="font-size: 17px; font-weight: 600; line-height: 1.3; margin: 0;">Standard</h3>
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #F6F4EE; background: #1B3A5C; padding: 4px 10px; border-radius: 3px;">Most sites</span>
+        </div>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 8px;">$1,800</p>
+        <p style="font-size: 17px; line-height: 1.5; margin: 0 0 20px;">Up to five pages</p>
+        <ul style="display: grid; gap: 8px; font-size: 17px; line-height: 1.5; color: #6B6862;">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Work or Gallery</li>
+          <li>Contact</li>
+        </ul>
+      </article>
+
+      <article data-component="tier" style="padding: 28px 24px; border: 1px solid #D9D5CB;">
+        <h3 style="font-size: 17px; font-weight: 600; line-height: 1.3; margin: 0 0 16px;">Custom</h3>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 8px;">Quoted</p>
+        <p style="font-size: 17px; line-height: 1.5; margin: 0 0 20px;">Typically from $2,500</p>
+        <ul style="display: grid; gap: 8px; font-size: 17px; line-height: 1.5; color: #6B6862;">
+          <li>Online stores and checkout</li>
+          <li>Booking and scheduling</li>
+          <li>Client logins or portals</li>
+          <li>Nine or more pages</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #D9D5CB; margin-top: 32px; padding-top: 20px;">
+      <p style="font-size: 17px; line-height: 1.5; margin: 0; max-width: 60ch;">Additional pages on either package — priced with the proposal, never after the build starts.</p>
+      <p style="font-size: 17px; font-weight: 600; line-height: 1.5; margin: 0;">$250 per page</p>
+    </div>
+  </div>
+</section>
+
+<section data-component="feature-list" style="background: #F6F4EE; border-top: 1px solid #D9D5CB;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 72px 24px 0;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 32px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 40px; border-left: 3px solid #1C1B18; padding-left: 16px;">What every website includes.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 40px; align-items: start;">
+      <div>
+        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 4px;">The design</h3>
+        <ul style="font-size: 17px; line-height: 1.5;">
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Custom design, not a template</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Works properly on phones and tablets</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Consistent type, colour and spacing</li>
+        </ul>
+      </div>
+      <div style="padding-left: 40px; border-left: 1px solid #D9D5CB;">
+        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 4px;">Built properly</h3>
+        <ul style="font-size: 17px; line-height: 1.5;">
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Contact form that reaches your inbox</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Set up to be found on Google</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Favicon and social share preview</li>
+        </ul>
+      </div>
+      <div style="padding-left: 40px; border-left: 1px solid #D9D5CB;">
+        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 4px;">How we finish</h3>
+        <ul style="font-size: 17px; line-height: 1.5;">
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">One revision round, all feedback together</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Launched on your existing domain</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">14 days of free fixes after launch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div data-component="cta-band" style="background: #1B3A5C; color: #F6F4EE; margin-top: 56px;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: 36px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+      <p style="font-size: 17px; line-height: 1.55; margin: 0; max-width: 52ch;"><strong style="font-weight: 600;">Not sure which package fits?</strong> We'll tell you on a 30-minute call, before you commit to anything.</p>
+      <a href="{{ bookingUrl }}" style="display: inline-block; font-size: 17px; font-weight: 600; text-decoration: none; color: #1B3A5C; background: #FFFFFF; padding: 14px 24px; border-radius: 4px; white-space: nowrap;">Book a call</a>
+    </div>
+  </div>
+  <div style="max-width: 1040px; margin: 0 auto; padding: 32px 24px 72px;">
+    <p style="font-size: 14px; line-height: 1.6; color: #6B6862; margin: 0; max-width: 88ch;"><strong style="font-weight: 600;">Quoted separately:</strong> writing your content from scratch · logo or brand design · photography and illustration · editing content yourself · online payments, booking or logins · ongoing SEO, ads or marketing · extra revision rounds at $250 each. You provide the words and the logo; we tidy headlines and grammar as part of the build.</p>
+  </div>
+</section>
+
+<section data-component="process" style="background: #F6F4EE; border-top: 1px solid #D9D5CB; border-bottom: 1px solid #D9D5CB;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 88px 24px;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 32px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 40px; border-left: 3px solid #1C1B18; padding-left: 16px;">How it works.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 40px; align-items: start;">
+      <div>
+        <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1B3A5C; margin: 0 0 14px; padding-bottom: 14px; border-bottom: 1px solid #D9D5CB;">Day one</p>
+        <p style="font-size: 22px; font-weight: 600; line-height: 1.3; letter-spacing: -0.015em; margin: 0 0 10px;">You send us your content</p>
+        <p style="font-size: 16px; line-height: 1.6; color: #6B6862; margin: 0;">Final text, your logo, brand colours, photos. A 50% deposit books your week in the calendar.</p>
+      </div>
+      <div style="padding-left: 40px; border-left: 1px solid #D9D5CB;">
+        <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1B3A5C; margin: 0 0 14px; padding-bottom: 14px; border-bottom: 1px solid #D9D5CB;">Days two to six</p>
+        <p style="font-size: 22px; font-weight: 600; line-height: 1.3; letter-spacing: -0.015em; margin: 0 0 10px;">We design, you review once</p>
+        <p style="font-size: 16px; line-height: 1.6; color: #6B6862; margin: 0;">Design in the first three days. You send all your feedback together in one round. We build and test in the last three.</p>
+      </div>
+      <div style="padding-left: 40px; border-left: 1px solid #D9D5CB;">
+        <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1B3A5C; margin: 0 0 14px; padding-bottom: 14px; border-bottom: 1px solid #D9D5CB;">Day seven</p>
+        <p style="font-size: 22px; font-weight: 600; line-height: 1.3; letter-spacing: -0.015em; margin: 0 0 10px;">Your site goes live</p>
+        <p style="font-size: 16px; line-height: 1.6; color: #6B6862; margin: 0;">Final 50% on approval, then we launch on your domain. Anything we broke is fixed free for 14 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-component="plans" style="background: #F6F4EE; border-top: 1px solid #D9D5CB;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 72px 24px;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 32px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 40px; border-left: 3px solid #1C1B18; padding-left: 16px;">After launch.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px; align-items: start;">
+
+      <article data-component="plan">
+        <h3 style="font-size: 17px; font-weight: 600; line-height: 1.3; margin: 0 0 12px;">Care</h3>
+        <p style="margin: 0 0 4px;"><span style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em;">$100</span><span style="font-size: 17px; color: #6B6862;">/month</span></p>
+        <p style="font-size: 17px; line-height: 1.5; color: #6B6862; margin: 0 0 20px;">Keeps the site up and safe</p>
+        <ul style="font-size: 17px; line-height: 1.5;">
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Hosting</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Uptime monitoring and backups</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Security updates</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Site-down response</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Fixing anything that breaks</li>
+        </ul>
+      </article>
+
+      <article data-component="plan">
+        <h3 style="font-size: 17px; font-weight: 600; line-height: 1.3; margin: 0 0 12px;">Growth Care</h3>
+        <p style="margin: 0 0 4px;"><span style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em;">$250</span><span style="font-size: 17px; color: #6B6862;">/month</span></p>
+        <p style="font-size: 17px; line-height: 1.5; color: #6B6862; margin: 0 0 20px;">Everything in Care, plus changes</p>
+        <ul style="font-size: 17px; line-height: 1.5;">
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Up to three update requests a month</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Content and image changes</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Small design and layout improvements</li>
+          <li style="border-top: 1px solid #D9D5CB; padding: 12px 0;">Priority response</li>
+        </ul>
+      </article>
+
+    </div>
+    <p style="font-size: 17px; line-height: 1.55; color: #6B6862; margin: 32px 0 0; max-width: 76ch;">Fixing something that broke is covered by Care. Creating something new is an update request on Growth Care, or a separate quote for anything over about two hours. You always own your domain. If you'd rather not have a plan, we hand the site over to your own hosting.</p>
+  </div>
+</section>
+
+<section data-component="cta" style="background: #1B3A5C; color: #F6F4EE;">
+  <div data-rise="1" style="max-width: 1040px; margin: 0 auto; padding: 72px 24px;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1, 'onum' 0; font-size: 32px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 24px; border-left: 3px solid #F6F4EE; padding-left: 16px; color: #F6F4EE;">Thirty minutes, no pitch.</h2>
+    <p style="font-size: 17px; line-height: 1.55; margin: 0 0 32px; max-width: 50ch;">We'll look at your current site together and give you an exact number. If it isn't a fit, we'll say so.</p>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
+      <a href="{{ bookingUrl }}" style="display: inline-block; font-size: 17px; font-weight: 600; text-decoration: none; color: #1B3A5C; background: #F6F4EE; padding: 14px 24px; border-radius: 4px;">Book a call</a>
+      <p style="font-size: 17px; line-height: 1.5; margin: 0;">Or email <a href="mailto:info@northboundweb.ca" style="color: #F6F4EE; text-decoration-color: rgba(246,244,238,0.5);">info@northboundweb.ca</a></p>
+    </div>
+  </div>
+</section>
+
+<footer data-component="footer" style="background: #F6F4EE; border-top: 1px solid #D9D5CB;">
+  <div style="max-width: 1040px; margin: 0 auto; padding: 28px 24px 40px;">
+    <p style="font-size: 17px; line-height: 1.5; color: #6B6862; margin: 0;">NorthBound Web · Hamilton, Ontario · info@northboundweb.ca</p>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://calendly.com/richard-northboundweb/30min&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { bookingUrl: this.props.bookingUrl ?? "https://calendly.com/richard-northboundweb/30min" };
+  }
+  componentDidMount() {
+    const els = Array.from(this.el ? this.el.querySelectorAll('[data-rise]') : document.querySelectorAll('[data-rise]'));
+    if (!els.length) return;
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(8px)';
+      el.style.transition = 'opacity 200ms cubic-bezier(0.2,0,0,1), transform 200ms cubic-bezier(0.2,0,0,1)';
+    });
+    const reveal = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(reveal); return;
+    }
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => els.forEach(reveal), 2000);
+  }
+}
+</script>
+</body>
+</html>
