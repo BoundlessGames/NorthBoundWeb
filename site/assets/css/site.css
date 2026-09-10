@@ -107,6 +107,7 @@
   --gutter: 24px;
   --radius: 4px;
   --radius-sm: 3px;
+  --radius-photo: 8px;
   --measure: 46ch;
 
   /* Motion */
@@ -521,6 +522,7 @@ strong { font-weight: var(--weight-semibold); }
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border: 1px solid var(--rule);
+  border-radius: var(--radius-photo);
 }
 
 .person__name {
