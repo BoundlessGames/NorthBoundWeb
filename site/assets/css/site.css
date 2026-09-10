@@ -471,6 +471,7 @@ strong { font-weight: var(--weight-semibold); }
 }
 
 .grid--people {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-7);
   max-width: 520px;
 }
@@ -511,12 +512,25 @@ strong { font-weight: var(--weight-semibold); }
    9. People
    -------------------------------------------------------------------------- */
 
+.person__figure { display: block; }
+
+.person__photo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
 .person__name {
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);
   line-height: var(--leading-tight);
   margin: 0 0 var(--space-1);
 }
+
+.person__figure + .person__name { margin-top: var(--space-4); }
 
 .person__role {
   font-size: var(--text-base);
