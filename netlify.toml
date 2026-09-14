@@ -4,31 +4,19 @@
 # No build step. Static HTML and CSS only.
 # _archive/ sits outside `publish` and is never deployed.
 
-# Force HTTPS and a single canonical host.
-# Verified 2026-09-14: Netlify's edge already 301s http -> https before
-# these rules are evaluated, so a `from = "http://…"` rule never matches.
-# http://www therefore still lands on the apex via https://www (two hops);
-# these rules do not collapse that. They are kept as an explicit statement
-# of intent and as a fallback should the platform redirect ever be off.
-[[redirects]]
-  from = "http://northboundweb.ca/*"
-  to = "https://northboundweb.ca/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.northboundweb.ca/*"
-  to = "https://northboundweb.ca/:splat"
-  status = 301
-  force = true
+# HTTPS and canonical host — no rules needed.
+# Netlify's edge 301s http -> https as soon as the certificate exists, and
+# redirects the non-primary host (www) to the primary one. Both happen
+# before any [[redirects]] here are evaluated, so a `from = "http://…"`
+# rule never matches. Verified 2026-09-14. Do not add one.
 
 [[headers]]
   for = "/*"
   [headers.values]
-    # HSTS: one year, all subdomains, eligible for the browser preload list.
-    # `preload` does nothing until the domain is submitted at hstspreload.org;
-    # once accepted there, removal takes months. Every subdomain must be HTTPS.
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # HSTS: one year, covering subdomains. Deliberately no `preload` —
+    # client sites will live on subdomains and a preload-list entry is
+    # effectively irreversible for months.
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
