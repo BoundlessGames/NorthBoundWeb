@@ -4,10 +4,12 @@
 # No build step. Static HTML and CSS only.
 # _archive/ sits outside `publish` and is never deployed.
 
-# Force HTTPS and a single canonical host, in one hop.
-# Netlify already 301s http -> https once the certificate exists; these
-# rules make it explicit in the repo and send www straight to the apex
-# instead of via https://www.
+# Force HTTPS and a single canonical host.
+# Verified 2026-09-14: Netlify's edge already 301s http -> https before
+# these rules are evaluated, so a `from = "http://…"` rule never matches.
+# http://www therefore still lands on the apex via https://www (two hops);
+# these rules do not collapse that. They are kept as an explicit statement
+# of intent and as a fallback should the platform redirect ever be off.
 [[redirects]]
   from = "http://northboundweb.ca/*"
   to = "https://northboundweb.ca/:splat"
