@@ -22,24 +22,14 @@
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
 
-# Fingerprint-free assets: revalidate HTML, cache the rest hard.
+# Caching.
+# Nothing under /assets/ is content-hashed, so nothing here may be
+# `immutable`: a file replaced under the same name must correct itself in
+# browsers without intervention. One week is long enough to be fast and
+# short enough to self-heal. Only ever add `immutable` to a rule whose
+# filenames carry a content hash.
 [[headers]]
-  for = "/assets/fonts/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/img/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-[[headers]]
-  for = "/assets/js/*"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
