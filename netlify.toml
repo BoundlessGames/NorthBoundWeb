@@ -4,9 +4,29 @@
 # No build step. Static HTML and CSS only.
 # _archive/ sits outside `publish` and is never deployed.
 
+# Force HTTPS and a single canonical host, in one hop.
+# Netlify already 301s http -> https once the certificate exists; these
+# rules make it explicit in the repo and send www straight to the apex
+# instead of via https://www.
+[[redirects]]
+  from = "http://northboundweb.ca/*"
+  to = "https://northboundweb.ca/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.northboundweb.ca/*"
+  to = "https://northboundweb.ca/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
+    # HSTS: one year, all subdomains, eligible for the browser preload list.
+    # `preload` does nothing until the domain is submitted at hstspreload.org;
+    # once accepted there, removal takes months. Every subdomain must be HTTPS.
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
