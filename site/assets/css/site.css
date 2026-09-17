@@ -322,6 +322,12 @@ strong { font-weight: var(--weight-semibold); }
   margin-top: var(--space-7);
 }
 
+/* A follow-on line to a section note: set apart, not a new block */
+.section__note--aside {
+  font-style: italic;
+  margin-top: var(--space-3);
+}
+
 .text-muted { color: var(--muted); }
 .text-sm { font-size: var(--text-sm); }
 
