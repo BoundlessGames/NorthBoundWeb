@@ -587,6 +587,24 @@ strong { font-weight: var(--weight-semibold); }
   color: var(--muted);
 }
 
+/* One-sentence description between the meta line and the list */
+.tier__desc {
+  font-size: var(--text-base);
+  line-height: var(--leading-tight);
+  color: var(--muted);
+  margin: 0 0 var(--space-5);
+}
+
+/* Per-tier footnote, sits at the bottom of the card */
+.tier__note {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--muted);
+  margin: var(--space-5) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
 .badge {
   font-size: var(--text-xs);
   font-weight: var(--weight-semibold);
